@@ -695,7 +695,8 @@ class MainWindow(QMainWindow, WindowMixin):
         if len(self.labelHist) > 0:
             self.labelDialog = LabelDialog(parent=self, listItem=self.labelHist)
 
-        text = self.labelDialog.popUp()
+        # text = self.labelDialog.popUp()
+        text = QString(u'pockey') # label only pockey
         if text is not None:
             self.addLabel(self.canvas.setLastLabel(text))
             if self.beginner(): # Switch to edit mode.
